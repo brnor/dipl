@@ -10,6 +10,7 @@ from IceGame import IceGame
 filename = "ezmazeLevels.txt"
 fn_results = "recurrent-" + filename.replace(".txt", "")
 DRAW_NETS = False
+MULTI_LEVELS = True
 
 def render(ob):
     ob = ob.astype('<U1')
@@ -33,8 +34,8 @@ def run():
                         neat.DefaultSpeciesSet, neat.DefaultStagnation,
                         config_path)
 
-    net = neat.nn.FeedForwardNetwork.create(winner, config)
-    env = IceGame(filename, max_steps=50)
+    net = neat.nn.recurrent.RecurrentNetwork.create(winner, config)
+    env = IceGame(filename, max_steps=50, MULTI_LEVELS)
     ob = env.reset()
     done = False
     count = 0

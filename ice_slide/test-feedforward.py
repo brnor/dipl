@@ -10,6 +10,7 @@ from IceGame import IceGame
 filename = "ezmazeLevels.txt"
 fn_results = "feedforward-" + filename.replace(".txt", "")
 DRAW_NETS = False
+MULTI_LEVELS = True
 
 def render(ob):
     ob = ob.astype('<U1')
@@ -21,7 +22,7 @@ def render(ob):
     print("@", "‾" * (ob.shape[1]), "@")
 
 def run():
-    with open("results/winner-"+fn_results, 'rb') as f:
+    with open("results/winner-pickle-"+fn_results, 'rb') as f:
         winner = pickle.load(f)
         
     print('loaded genome:')
@@ -33,8 +34,8 @@ def run():
                         neat.DefaultSpeciesSet, neat.DefaultStagnation,
                         config_path)
 
-    net = neat.nn.FeedForwardNetwork.create(winner, config)
-    env = IceGame(filename, max_steps=50)
+    net = neat.nn.feed_forward.FeedForwardNetwork.create(winner, config)
+    env = IceGame(filename, max_steps=50, multiple=MULTI_LEVELS)
     ob = env.reset()
     done = False
     count = 0
