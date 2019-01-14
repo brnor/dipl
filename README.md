@@ -1,7 +1,8 @@
 # dipl
 Tested on Python 3.6.7  
 gym_puyopuyo env from: https://github.com/frostburn/gym_puyopuyo/  
-Note: the PuyoPuyo environment posted here is slightly edited and different from the original.
+Note: the PuyoPuyo environment posted here is slightly edited for one specific example.  
+All credit goes to user [frostburn](https://github.com/frostburn)
 
 Requires:  
 `pip3 install neat-python graphviz matplotlib numpy`
