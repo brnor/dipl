@@ -36,7 +36,8 @@ class Worker():
                 inputs = np.ndarray.flatten(ob) / 4 # normalize between 0-1
                 
                 nn_output = net.activate(inputs)
-                ob, rew, done, info = self.env.step(nn_output)
+                action = np.argmax(nn_output)
+                ob, rew, done, info = self.env.step(action)
                 
                 # Reward is calculated:
                 # Make a step: - 0.1
