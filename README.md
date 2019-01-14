@@ -16,7 +16,10 @@ Before installing dependancies, it is recommended to set up a virtual environmen
 After that activate the environment:  
 `source bin/activate`
 
-# Puyo puyo
+# Puyo puyo  
+Goal of the game is to match up dots of the same color. Dots are 'cleared' when 4 of them are matched up.  
+The dots can be matched up horizontally and vertically, but not diagonally. 
+
 Requires wheel for `gym` installation.  
 `pip3 install wheel`  
 `pip3 install -e .`
