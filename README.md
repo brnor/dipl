@@ -4,6 +4,8 @@ gym_puyopuyo env from: https://github.com/frostburn/gym_puyopuyo/
 Note: the PuyoPuyo environment posted here is slightly edited for one specific example.  
 All credit goes to user [frostburn](https://github.com/frostburn)
 
+The `visualize.py` file is taken from NEAT-Python examples.
+
 Requires:  
 `pip3 install neat-python graphviz matplotlib numpy`
 
