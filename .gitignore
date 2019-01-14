@@ -1,3 +1,14 @@
+# Project specific
+checkpoints/
+results/
+bin/
+lib64/
+lib/
+share/
+pyvenv.cfg
+lib64
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
